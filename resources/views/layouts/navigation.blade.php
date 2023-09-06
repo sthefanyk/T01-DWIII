@@ -19,6 +19,14 @@
                     <x-nav-link :href="route('noticias.index')" :active="request()->routeIs('noticias.index')">
                         {{ __('Noticias') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('papeis.index')" :active="request()->routeIs('papeis.index')">
+                        {{ __('Papeis') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('usuarios.index')" :active="request()->routeIs('usuarios.index')">
+                        {{ __('Usuarios') }}
+                    </x-nav-link>
                 </div>
             </div>
 

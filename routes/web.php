@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,5 +25,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::resource('/noticias', NoticiaController::class);
+Route::resource('/papeis', RoleController::class);
+Route::resource('/usuarios', UserController::class);
 
 require __DIR__.'/auth.php';
