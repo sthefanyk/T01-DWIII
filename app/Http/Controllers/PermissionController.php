@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,7 @@ class PermissionController extends Controller
     public function index()
     {
         $permissions = Permission::all();
-        return view('permissions.index', compact('permissions'));
+        return view('permission.index', compact('permissions'));
     }
 
     /**
@@ -36,7 +37,14 @@ class PermissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $role = $request->papel;
+        $role = Role::findByName($role);
+        $permissions = $request->permissoes;
+
+        $role->syncPermissions($permissions);
+        
+        return redirect()->route('roles.index');
     }
 
     /**

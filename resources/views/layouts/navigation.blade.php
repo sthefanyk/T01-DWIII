@@ -20,7 +20,7 @@
                         {{ __('Noticias') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('papeis.index')" :active="request()->routeIs('papeis.index')">
+                    <x-nav-link :href="route('roles.index')" :active="request()->routeIs('papeis.index')">
                         {{ __('Papeis') }}
                     </x-nav-link>
 

@@ -8,13 +8,13 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     @if(Auth::check())
-                    @can('create', Spatie\Permission\Models\Role::class)
+                    {{-- @can('create', Spatie\Permission\Models\Role::class) --}}
                     <div style="margin-bottom:2%;">
                         <button type="button" class="btn btn-outline-primary">
                             <a href="{{ route('roles.create') }}">Criar Papel</a>
                         </button>
                     </div>
-                    @endcan
+                    {{-- @endcan --}}
                     @endif
                     <!--<ul class="list-group">-->
                         <table class="table">
@@ -37,7 +37,7 @@
                                     <div style="display:flex">    
                                     @auth
                                         <!-- can('delete', $role) -->
-                                        @can('delete', $role)
+                                        {{-- @can('delete', $role) --}}
                                             <div style="margin-right:2%;">
                                                 <form method="post" action=" {{ route('roles.destroy', $role) }} "
                                                     onsubmit="return confirm('Tem certeza que deseja REMOVER {{ addslashes($role->titulo) }}?')">
@@ -48,27 +48,27 @@
                                                     </button>
                                                 </form>
                                             </div>
-                                        @endcan
+                                        {{-- @endcan --}}
                                         <!--endcan-->
                                         
                                         <!--can('atualizar', $role)-->
-                                        @can('update', $role)
+                                        {{-- @can('update', $role) --}}
                                             <div style="margin-right:2%;">
                                                 <button type="button" class="btn btn-outline-success">
                                                     <a href="{{ route('roles.edit', $role) }}">Editar</a>
                                                 </button>
                                             </div>
-                                        @endcan
+                                        {{-- @endcan --}}
                                         <!--endcan-->
                                         
                                         <!--can('view', $role)-->
-                                        @can('view', $role)
+                                        {{-- @can('view', $role) --}}
                                             <div style="margin-right:2%;">
                                                 <button type="button" class="btn btn-outline-info">
-                                                    <a href="{{ route('roles.show', $role) }}">Visualizar</a>
+                                                    <a href="{{ route('roles.show', $role) }}">Permissoes do Papel</a>
                                                 </button>
                                             </div>
-                                        @endcan
+                                        {{-- @endcan --}}
                                         <!--endcan-->
                                     @endauth
                                     </div>

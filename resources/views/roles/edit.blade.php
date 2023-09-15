@@ -9,20 +9,17 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <!-- conteudo -->
 
-        <form method="post" action="{{ route('noticias.update', $noticia) }}">
+        <form method="post" action="{{ route('roles.update', $role) }}">
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="titulo" class="">Titulo</label>
-                <input type="text" class="form-control" name="titulo" id="titulo" value="{{ $noticia->titulo }}">
-                <br>
-                <label for="descricao" class="">Descricao</label>
-                <input type="text" class="form-control" name="descricao" id="descricao" value="{{ $noticia->descricao }}">
+                <label for="nome" class="">Nome</label>
+                <input type="text" class="form-control" name="nome" id="nome" value="{{ $role->name }}">
             </div>
 
             <button class="btn btn-primary">Editar</button>
             <button class="btn btn-secondary">
-                <a href="{{route('noticias.index')}}">Voltar</a>
+                <a href="{{route('roles.index')}}">Voltar</a>
             </button>
         
         </form>
