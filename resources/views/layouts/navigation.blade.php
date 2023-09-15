@@ -24,7 +24,7 @@
                         {{ __('Papeis') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('usuarios.index')" :active="request()->routeIs('usuarios.index')">
+                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('usuarios.index')">
                         {{ __('Usuarios') }}
                     </x-nav-link>
                 </div>

@@ -62,13 +62,13 @@
                                         <!--endcan-->
                                         
                                         <!--can('view', $user)-->
-                                        @can('view', $user)
+                                        {{-- @can('view', $user) --}}
                                             <div style="margin-right:2%;">
                                                 <button type="button" class="btn btn-outline-info">
-                                                    <a href="{{ route('users.show', $user) }}">Visualizar</a>
+                                                    <a href="{{ route('users.show', $user) }}">Papeis do Usuario</a>
                                                 </button>
                                             </div>
-                                        @endcan
+                                        {{-- @endcan --}}
                                         <!--endcan-->
                                     @endauth
                                     </div>

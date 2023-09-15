@@ -28,6 +28,6 @@ Route::get('/dashboard', function () {
 Route::resource('/noticias', NoticiaController::class);
 Route::resource('/roles', RoleController::class);
 Route::resource('/permission', PermissionController::class);
-Route::resource('/usuarios', UserController::class);
+Route::resource('/users', UserController::class);
 
 require __DIR__.'/auth.php';
