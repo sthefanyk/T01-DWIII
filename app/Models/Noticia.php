@@ -11,6 +11,12 @@ class Noticia extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'titulo',
+        'descricao',
+        'user_id',
+    ];
+
     public const TABELA_NOTICIA = "noticias";
 
     public const CAMPO_DELETED_AT = "deleted_at";

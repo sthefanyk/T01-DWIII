@@ -18,7 +18,7 @@ class NoticiaPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true;
     }
 
     /**

@@ -1,0 +1,59 @@
+GET http://localhost:8000/api/noticias
+Accept: application/json
+Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+
+###
+POST http://localhost:8000/api/login
+Content-Type: application/json
+
+{
+    "name": "Douglas",
+    "email": "douglas@douglas.com",
+    "password": "123456789"
+}
+
+###
+GET http://localhost:8000/api/noticias/1
+Accept: application/json
+Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+
+###
+POST http://localhost:8000/api/noticias
+Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Content-Type: application/json
+Accept: application/json
+
+{
+    "titulo": "TITULO NOTICIA 3",
+    "descricao": "DESCRICAO NOTICIA 3",
+    "user_id": 3
+}
+
+###
+PUT http://localhost:8000/api/noticias/3
+Accept: application/json
+Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Content-Type: application/json
+
+{
+    "titulo": "TITULO NOTICIA 5",
+    "descricao": "DESCRICAO NOTICIA 5",
+    "user_id": 5
+}
+
+###
+PATCH http://localhost:8000/api/noticias/3
+Accept: application/json
+Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Content-Type: application/json
+
+{
+    "titulo": "TITULO NOTICIA 4",
+    "user_id": 5
+}
+
+###
+DELETE http://localhost:8000/api/noticias/5
+Accept: application/json
+Authorization: Bearer 11|nC6POeBh40qidOIiGaPu5Fq6QflFTq7DzzcGS3ax
+
