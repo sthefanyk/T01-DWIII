@@ -22,12 +22,20 @@ class UserSeeder extends Seeder
         'admin@admin.com',
     ];
 
+    static $admin = [
+        1,
+        0,
+        0,
+        1,
+    ];
+
     public function run(){
         for ($i = 0; $i < count(self::$nomes); $i++)
             $user = User::create([
                 'name' => self::$nomes[$i],
                 'email' => self::$emails[$i],
                 'password' => Hash::make('123456789'),
+                'admin' => self::$admin[$i],
             ]);            
         $user->save();
     }

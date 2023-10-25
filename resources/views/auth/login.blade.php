@@ -50,6 +50,12 @@
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>
+
+                <x-button class="ml-3">
+                    <a href="{{ route('social.login', ["provider" => "github"]) }}">{{
+                        __('Log in GITHUB') }}</a>
+                    {{-- <a href="{{ route('github.login') }}">{{ __('Log in GITHUB') }}</a> --}}
+                </x-button>
             </div>
         </form>
     </x-auth-card>
