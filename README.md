@@ -83,3 +83,5 @@ $ npm run dev
 13) Em outra aba do terminal execute o servidor PHP:
 
 $ php artisan serve
+
+$ php artisan tinker < spatie_script.php

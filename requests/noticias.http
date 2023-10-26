@@ -1,25 +1,25 @@
 GET http://localhost:8000/api/noticias
 Accept: application/json
-Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Authorization: Bearer 7|KciJzBTAcRgTHzCuL83Pi6tvDzMzo49qKxLZo9XB
 
 ###
 POST http://localhost:8000/api/login
 Content-Type: application/json
 
 {
-    "name": "Douglas",
-    "email": "douglas@douglas.com",
-    "password": "123456789"
+    "name": "Sthefany Kimberly",
+    "email": "sthefanykmbrl@gmail.com",
+    "password": "12345678"
 }
 
 ###
 GET http://localhost:8000/api/noticias/1
 Accept: application/json
-Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Authorization: Bearer 7|KciJzBTAcRgTHzCuL83Pi6tvDzMzo49qKxLZo9XB
 
 ###
 POST http://localhost:8000/api/noticias
-Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Authorization: Bearer 7|KciJzBTAcRgTHzCuL83Pi6tvDzMzo49qKxLZo9XB
 Content-Type: application/json
 Accept: application/json
 
@@ -32,7 +32,7 @@ Accept: application/json
 ###
 PUT http://localhost:8000/api/noticias/3
 Accept: application/json
-Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Authorization: Bearer 3|4n9oBxwPMbSqizDfp2WbItXfmhzhxXKk9RBsJ1Vt
 Content-Type: application/json
 
 {
@@ -44,7 +44,7 @@ Content-Type: application/json
 ###
 PATCH http://localhost:8000/api/noticias/3
 Accept: application/json
-Authorization: Bearer 12|Nfi1CY9N86MlnSxNrWhki2l4sIQmUV6mrTPauuAd
+Authorization: Bearer 3|4n9oBxwPMbSqizDfp2WbItXfmhzhxXKk9RBsJ1Vt
 Content-Type: application/json
 
 {
