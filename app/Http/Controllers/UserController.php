@@ -3,11 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Spatie\Permission\Models\Role;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
+use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+    public function editpassword()
+    {
+        return view('users.updatepassword');
+    }
+
+    public function updatepassword(Request $request)
+    {
+        $request->validate([
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+
+        $user = User::find(auth()->user()->id);
+
+        if (isset($request->password)) {
+            $user->password = Hash::make($request->password);
+            $user->save();
+        }
+
+        return redirect(RouteServiceProvider::HOME);
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Noticia;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class NoticiaSeeder extends Seeder
@@ -12,17 +11,17 @@ class NoticiaSeeder extends Seeder
     static $titulo = [
         'Titulo Noticia 1',
         'Titulo Noticia 2',
-        'Titulo Noticia 3',        
+        'Titulo Noticia 3',
     ];
     static $descricao = [
         'Descricao Noticia 1',
         'Descricao Noticia 2',
-        'Descricao Noticia 3',        
+        'Descricao Noticia 3',
     ];
     static $user_id = [
         '1',
         '2',
-        '1',        
+        '1',
     ];
 
     /**
